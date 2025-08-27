@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emergency Hotline-</title>
+    <title>Emergency Hotline</title>
     <!-- vanilla css -->
     <link rel="stylesheet" href="./styles/style.css" />
     <!-- google font -->
@@ -30,12 +30,14 @@
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="w-[90vw] h-[100vh] mx-auto">
-    <header class="sm:px-15 pt-5 sm:py-6  ">
-      <section class="sm:flex-row flex flex-col justify-between items-center gap-4 ">
+  <body class="h-[100vh]">
+    <header class="">
+      <section
+        class="sm:flex-row flex flex-col justify-between items-center gap-4 w-[90vw] mx-auto my-5"
+      >
         <div id="brand-logo" class="flex gap-2 justify-center items-center">
           <img class="w-12" src="./assets/logo.png" alt="Logo" />
-          <h2 class="text-[#006747] font-extrabold text-2xl/6 text-madurai ">
+          <h2 class="text-[#006747] font-extrabold text-2xl/6 text-madurai">
             Emergency <span class="block">service</span>
           </h2>
         </div>
@@ -60,7 +62,24 @@
           </div>
         </div>
       </section>
-      <section></section>
+      <section
+        class="flex justify-center w-full h-52 bg-[linear-gradient(90deg,#013223_0%,#006747_50%,#013223_100%)] py-5"
+      >
+        <div
+          class="text-center text-white flex flex-col justify-center items-center gap-4"
+        >
+          <img class="w-23" src="./assets/logo-dark.png" alt="logo-dark" />
+          <div class="">
+            <h2 class="text-3xl font-bold text-madurai mb-2">
+              Emergency Service Directory
+            </h2>
+            <p class="text-lg font-normal text-madurai">
+              Government Emergency Services at Your Fingertip - A Project by
+              Government of the People's Republic of Bangladesh
+            </p>
+          </div>
+        </div>
+      </section>
     </header>
     <script src="./Javascript/script.js"></script>
   </body>
