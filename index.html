@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Hotline-</title>
+    <!-- vanilla css -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Hind+Madurai:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -12,17 +21,47 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- daisy ui -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
       rel="stylesheet"
       type="text/css"
     />
+    <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <body class="w-[90vw] h-[100vh] mx-auto">
+    <header class="sm:px-15 pt-5 sm:py-6  ">
+      <section class="sm:flex-row flex flex-col justify-between items-center gap-4 ">
+        <div id="brand-logo" class="flex gap-2 justify-center items-center">
+          <img class="w-12" src="./assets/logo.png" alt="Logo" />
+          <h2 class="text-[#006747] font-extrabold text-2xl/6 text-madurai ">
+            Emergency <span class="block">service</span>
+          </h2>
+        </div>
+        <div id="counter-panel" class="flex justify-center items-center gap-4">
+          <div
+            class="favorite-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
+          >
+            <span class="favorite">0</span>
+            <img class="w-6" src="./assets/heart.png" alt="" />
+          </div>
+          <div
+            class="coin-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
+          >
+            <span class="coin">100</span>
+            <img class="w-6" src="./assets/coin.png" alt="" />
+          </div>
+          <div
+            class="text-madurai copy-counter flex justify-center items-center gap-2 bg-[#00a63e] text-white font-semibold px-6 py-3 rounded-[50px]"
+          >
+            <span class="copy-number">0</span>
+            <p>Copy</p>
+          </div>
+        </div>
+      </section>
+      <section></section>
+    </header>
     <script src="./Javascript/script.js"></script>
   </body>
 </html>

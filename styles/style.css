@@ -1,0 +1,13 @@
+.text-madurai {
+  font-family: "Hind Madurai", sans-serif;
+  font-style: normal;
+}
+.text-baloo {
+  font-family: "Baloo Da 2", sans-serif;
+  font-optical-sizing: auto;
+}
+.text-noto {
+  font-family: "Noto Sans Bengali", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+}
