@@ -23,6 +23,11 @@
     />
     <!-- daisy ui -->
     <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
       rel="stylesheet"
       type="text/css"
@@ -30,50 +35,108 @@
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="h-[100vh]">
-    <header class="">
+  <body class="h-[100vh] bg-[#f5fff6]">
+    <header class="bg-white">
+      <!-- navbar section -->
       <section
-        class="sm:flex-row flex flex-col justify-between items-center gap-4 w-[90vw] mx-auto my-5"
+        class="sm:flex-row flex justify-between items-center gap-4 w-[90vw] mx-auto my-5"
       >
         <div id="brand-logo" class="flex gap-2 justify-center items-center">
           <img class="w-12" src="./assets/logo.png" alt="Logo" />
-          <h2 class="text-[#006747] font-extrabold text-2xl/6 text-madurai">
+          <h2
+            class="text-[#006747] font-extrabold text-base/4 sm:text-2xl/6 text-madurai"
+          >
             Emergency <span class="block">service</span>
           </h2>
         </div>
-        <div id="counter-panel" class="flex justify-center items-center gap-4">
-          <div
-            class="favorite-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
-          >
-            <span class="favorite">0</span>
-            <img class="w-6" src="./assets/heart.png" alt="" />
-          </div>
-          <div
-            class="coin-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
-          >
-            <span class="coin">100</span>
-            <img class="w-6" src="./assets/coin.png" alt="" />
-          </div>
-          <div
-            class="text-madurai copy-counter flex justify-center items-center gap-2 bg-[#00a63e] text-white font-semibold px-6 py-3 rounded-[50px]"
-          >
-            <span class="copy-number">0</span>
-            <p>Copy</p>
+        <div id="counter-panel" class="sm:block hidden">
+          <div class="flex justify-center items-center gap-4">
+            <div
+              class="favorite-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
+            >
+              <span class="favorite">0</span>
+              <img class="w-6" src="./assets/heart.png" alt="" />
+            </div>
+            <div
+              class="coin-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
+            >
+              <span class="coin">100</span>
+              <img class="w-6" src="./assets/coin.png" alt="" />
+            </div>
+            <div
+              class="text-madurai copy-counter flex justify-center items-center gap-2 bg-[#00a63e] text-white font-semibold px-6 py-3 rounded-[50px]"
+            >
+              <span class="copy-number">0</span>
+              <p>Copy</p>
+            </div>
           </div>
         </div>
+        <div class="toggle-menu sm:hidden block">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </section>
+      <!-- mobile responsive -->
+      <section id="mobile-responsive " class="hidden">
+        <div class="mobile-counter-panel block sm:hidden mb-4">
+          <div class="">
+            <div class="flex justify-center items-center gap-4">
+              <div
+                class="favorite-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
+              >
+                <span class="favorite">0</span>
+                <img class="w-6" src="./assets/heart.png" alt="" />
+              </div>
+              <div
+                class="coin-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
+              >
+                <span class="coin">100</span>
+                <img class="w-6" src="./assets/coin.png" alt="" />
+              </div>
+              <div
+                class="text-madurai copy-counter flex justify-center items-center gap-2 bg-[#00a63e] text-white font-semibold px-6 py-3 rounded-[50px]"
+              >
+                <span class="copy-number">0</span>
+                <p>Copy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="border-gray-300" />
+        <aside
+          class="call-history flex-1 p-4 bg-white rounded-2xl shadow overflow-hidden h-[80vh]"
+        >
+          <div class="call-history-top flex justify-between items-center">
+            <h3 class="font-semibold text-madurai text-xl">
+              <img src="./assets/clock.svg" class="inline-block" alt="" />
+              Call History
+            </h3>
+            <button
+              class="btn text-lg text-madurai bg-[#00a63e] text-white font-normal px-8 rounded-[50px]"
+              id="history-clear-btn"
+            >
+              Clear
+            </button>
+          </div>
+          <div class="call-history mt-4 bg-blue-100 h-full w-full"></div>
+        </aside>
+      </section>
+      <!-- heading section -->
       <section
-        class="flex justify-center w-full h-52 bg-[linear-gradient(90deg,#013223_0%,#006747_50%,#013223_100%)] py-5"
+        class="flex justify-center w-full h-52 bg-[linear-gradient(90deg,#013223_0%,#006747_50%,#013223_100%)] py-5 px-2"
       >
         <div
-          class="text-center text-white flex flex-col justify-center items-center gap-4"
+          class="text-center text-white flex flex-col justify-center items-center sm:gap-4"
         >
-          <img class="w-23" src="./assets/logo-dark.png" alt="logo-dark" />
+          <img
+            class="sm:w-23 w-15"
+            src="./assets/logo-dark.png"
+            alt="logo-dark"
+          />
           <div class="">
-            <h2 class="text-3xl font-bold text-madurai mb-2">
+            <h2 class="sm:text-3xl text-2xl font-bold text-madurai mb-2">
               Emergency Service Directory
             </h2>
-            <p class="text-lg font-normal text-madurai">
+            <p class="sm:text-lg text-base font-normal text-madurai">
               Government Emergency Services at Your Fingertip - A Project by
               Government of the People's Republic of Bangladesh
             </p>
@@ -81,6 +144,244 @@
         </div>
       </section>
     </header>
+    <!-- main section: card and aside area -->
+    <main>
+      <section class="sm:px-12 sm:py-10 p-5 w-full flex gap-6">
+        <section
+          id="hotline-cards-section"
+          class="flex-3 grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-6"
+        >
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/ambulance.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              National Emergency Number
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              National Emergency
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >All</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/ambulance.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              National Emergency Number
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              National Emergency
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >All</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/ambulance.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              National Emergency Number
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              National Emergency
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >All</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/ambulance.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              National Emergency Number
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              National Emergency
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >All</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/ambulance.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              National Emergency Number
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              National Emergency
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >All</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/ambulance.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              National Emergency Number
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              National Emergency
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >All</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+        </section>
+        <aside
+          id="#hotline-call-history"
+          class="flex-1 px-6 py-8 bg-white rounded-2xl shadow overflow-hidden sm:block hidden"
+        >
+          <div class="call-history-top flex justify-between items-center">
+            <h3 class="font-semibold text-madurai text-xl">
+              <img src="./assets/clock.svg" class="inline-block" alt="" />
+              Call History
+            </h3>
+            <button
+              class="btn text-lg text-madurai bg-[#00a63e] text-white font-normal px-8 rounded-[50px]"
+              id="history-clear-btn"
+            >
+              Clear
+            </button>
+          </div>
+          <div class="call-history mt-4 bg-blue-100 h-full w-full"></div>
+        </aside>
+      </section>
+    </main>
     <script src="./Javascript/script.js"></script>
   </body>
 </html>
