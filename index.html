@@ -35,7 +35,7 @@
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="h-[100vh] bg-[#f5fff6]">
+  <body class="h-full bg-[#f5fff6] text-madurai">
     <header class="bg-white">
       <!-- navbar section -->
       <section
@@ -54,19 +54,19 @@
             <div
               class="favorite-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
             >
-              <span class="favorite">0</span>
+              <span id="favorite-count" class="favorite">0</span>
               <img class="w-6" src="./assets/heart.png" alt="" />
             </div>
             <div
               class="coin-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
             >
-              <span class="coin">100</span>
+              <span id="coin">100</span>
               <img class="w-6" src="./assets/coin.png" alt="" />
             </div>
             <div
               class="text-madurai copy-counter flex justify-center items-center gap-2 bg-[#00a63e] text-white font-semibold px-6 py-3 rounded-[50px]"
             >
-              <span class="copy-number">0</span>
+              <span id="copy-number">0</span>
               <p>Copy</p>
             </div>
           </div>
@@ -128,15 +128,15 @@
           class="text-center text-white flex flex-col justify-center items-center sm:gap-4"
         >
           <img
-            class="sm:w-23 w-15"
+            class="sm:w-20 lg:w-23 w-15"
             src="./assets/logo-dark.png"
             alt="logo-dark"
           />
           <div class="">
-            <h2 class="sm:text-3xl text-2xl font-bold text-madurai mb-2">
+            <h2 class="lg:text-3xl text-2xl font-bold text-madurai mb-2">
               Emergency Service Directory
             </h2>
-            <p class="sm:text-lg text-base font-normal text-madurai">
+            <p class="lg:text-lg text-base font-normal text-madurai">
               Government Emergency Services at Your Fingertip - A Project by
               Government of the People's Republic of Bangladesh
             </p>
@@ -149,7 +149,7 @@
       <section class="sm:px-12 sm:py-10 p-5 w-full flex gap-6">
         <section
           id="hotline-cards-section"
-          class="flex-3 grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-6"
+          class="flex-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6"
         >
           <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
             <div class="flex justify-between items-center">
@@ -173,14 +173,189 @@
               class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
               >All</span
             >
-            <div class="card-btn mt-6 flex gap-4">
+            <div class="card-buttons mt-6 flex gap-4">
               <button
-                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+                class="copy-btn flex-1 btn bg-white text-base font-normal rounded-lg"
               >
                 <img src="./assets/copy.svg" alt="" /> Copy
               </button>
               <button
-                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-blue-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/police.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              Police Helpline Number
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              Police
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >Police</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="copy-btn flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/fire-service.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              Fire Service Number
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              Fire Service
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >Fire</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="copy-btn flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-violet-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/ambulance.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              Ambulance Service
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              Ambulance
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">1994-999999</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >Health</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="copy-btnflex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/emergency.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              Women & Child Helpline
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              Women & Child Helpline
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">109</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >Help</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="copy-btn flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/call.svg" alt="" />Call
+              </button>
+            </div>
+          </div>
+          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
+            <div class="flex justify-between items-center">
+              <div class="bg-yellow-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/emergency.png" alt="" />
+              </div>
+              <div class="favorite-btn cursor-pointer">
+                <img src="./assets/heart.svg" alt="" />
+              </div>
+            </div>
+            <h3
+              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
+            >
+              Anti-Corruption Helpline
+            </h3>
+            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
+              Anti-Corruption
+            </p>
+            <p class="hotline-number mt-4 text-3xl font-bold">106</p>
+            <span
+              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
+              >Govt.</span
+            >
+            <div class="card-btn mt-6 flex gap-4">
+              <button
+                class="copy-btn flex-1 btn bg-white text-base font-normal rounded-lg"
+              >
+                <img src="./assets/copy.svg" alt="" /> Copy
+              </button>
+              <button
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
               >
                 <img src="./assets/call.svg" alt="" />Call
               </button>
@@ -198,24 +373,24 @@
             <h3
               class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
             >
-              National Emergency Number
+              Electricity Helpline
             </h3>
             <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
-              National Emergency
+              Electricity Outage
             </p>
-            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <p class="hotline-number mt-4 text-3xl font-bold">16216</p>
             <span
               class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
-              >All</span
+              >Electricity</span
             >
             <div class="card-btn mt-6 flex gap-4">
               <button
-                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+                class="copy-btn flex-1 btn bg-white text-base font-normal rounded-lg"
               >
                 <img src="./assets/copy.svg" alt="" /> Copy
               </button>
               <button
-                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
               >
                 <img src="./assets/call.svg" alt="" />Call
               </button>
@@ -224,7 +399,7 @@
           <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
             <div class="flex justify-between items-center">
               <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
-                <img src="./assets/ambulance.png" alt="" />
+                <img src="./assets/emergency.png" alt="" />
               </div>
               <div class="favorite-btn cursor-pointer">
                 <img src="./assets/heart.svg" alt="" />
@@ -233,24 +408,24 @@
             <h3
               class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
             >
-              National Emergency Number
+              Brac Helpline
             </h3>
             <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
-              National Emergency
+              Brac
             </p>
-            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <p class="hotline-number mt-4 text-3xl font-bold">16445</p>
             <span
               class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
-              >All</span
+              >NGO</span
             >
             <div class="card-btn mt-6 flex gap-4">
               <button
-                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+                class="copy-btn flex-1 btn bg-white text-base font-normal rounded-lg"
               >
                 <img src="./assets/copy.svg" alt="" /> Copy
               </button>
               <button
-                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
               >
                 <img src="./assets/call.svg" alt="" />Call
               </button>
@@ -258,8 +433,8 @@
           </div>
           <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
             <div class="flex justify-between items-center">
-              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
-                <img src="./assets/ambulance.png" alt="" />
+              <div class="bg-green-200 p-4 w-15 h-15 rounded-2xl">
+                <img src="./assets/emergency.png" alt="" />
               </div>
               <div class="favorite-btn cursor-pointer">
                 <img src="./assets/heart.svg" alt="" />
@@ -268,94 +443,24 @@
             <h3
               class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
             >
-              National Emergency Number
+              Bangladesh Railway Helpline
             </h3>
             <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
-              National Emergency
+              Bangladesh Railway
             </p>
-            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
+            <p class="hotline-number mt-4 text-3xl font-bold">163</p>
             <span
               class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
-              >All</span
+              >Travel</span
             >
             <div class="card-btn mt-6 flex gap-4">
               <button
-                class="flex-1 btn bg-white text-base font-normal rounded-lg"
+                class="copy-btn flex-1 btn bg-white text-base font-normal rounded-lg"
               >
                 <img src="./assets/copy.svg" alt="" /> Copy
               </button>
               <button
-                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
-              >
-                <img src="./assets/call.svg" alt="" />Call
-              </button>
-            </div>
-          </div>
-          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
-            <div class="flex justify-between items-center">
-              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
-                <img src="./assets/ambulance.png" alt="" />
-              </div>
-              <div class="favorite-btn cursor-pointer">
-                <img src="./assets/heart.svg" alt="" />
-              </div>
-            </div>
-            <h3
-              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
-            >
-              National Emergency Number
-            </h3>
-            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
-              National Emergency
-            </p>
-            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
-            <span
-              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
-              >All</span
-            >
-            <div class="card-btn mt-6 flex gap-4">
-              <button
-                class="flex-1 btn bg-white text-base font-normal rounded-lg"
-              >
-                <img src="./assets/copy.svg" alt="" /> Copy
-              </button>
-              <button
-                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
-              >
-                <img src="./assets/call.svg" alt="" />Call
-              </button>
-            </div>
-          </div>
-          <div class="hotline-card-body px-6 py-8 bg-white rounded-2xl shadow">
-            <div class="flex justify-between items-center">
-              <div class="bg-rose-200 p-4 w-15 h-15 rounded-2xl">
-                <img src="./assets/ambulance.png" alt="" />
-              </div>
-              <div class="favorite-btn cursor-pointer">
-                <img src="./assets/heart.svg" alt="" />
-              </div>
-            </div>
-            <h3
-              class="card-title mt-4 text-xl sm:text-2xl font-bold text-madurai"
-            >
-              National Emergency Number
-            </h3>
-            <p class="card-subtitle text-lg font-md text-madurai text-gray-400">
-              National Emergency
-            </p>
-            <p class="hotline-number mt-4 text-3xl font-bold">999</p>
-            <span
-              class="category-badge px-4 py-1 text-lg inline-block mt-1 bg-gray-200 text-gray-500 text-madurai rounded-3xl"
-              >All</span
-            >
-            <div class="card-btn mt-6 flex gap-4">
-              <button
-                class="flex-1 btn bg-white text-base font-normal rounded-lg"
-              >
-                <img src="./assets/copy.svg" alt="" /> Copy
-              </button>
-              <button
-                class="flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
+                class="call-btn flex-1 btn bg-green-600 text-white text-base font-normal rounded-lg"
               >
                 <img src="./assets/call.svg" alt="" />Call
               </button>
@@ -364,7 +469,7 @@
         </section>
         <aside
           id="#hotline-call-history"
-          class="flex-1 px-6 py-8 bg-white rounded-2xl shadow overflow-hidden sm:block hidden"
+          class="flex-1 px-6 py-8 bg-white rounded-2xl shadow overflow-hidden lg:block hidden"
         >
           <div class="call-history-top flex justify-between items-center">
             <h3 class="font-semibold text-madurai text-xl">
@@ -378,7 +483,10 @@
               Clear
             </button>
           </div>
-          <div class="call-history mt-4 bg-blue-100 h-full w-full"></div>
+            <div
+              id="call-history"
+              class="mt-2"
+            ></div>
         </aside>
       </section>
     </main>
