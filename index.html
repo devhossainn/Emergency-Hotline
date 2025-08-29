@@ -39,7 +39,7 @@
     <header class="bg-white">
       <!-- navbar section -->
       <section
-        class="sm:flex-row flex justify-between items-center gap-4 w-[90vw] mx-auto my-5"
+        class="sm:flex-row flex flex-col justify-between items-center gap-4 w-[90vw] mx-auto my-5"
       >
         <div id="brand-logo" class="flex gap-2 justify-center items-center">
           <img class="w-12" src="./assets/logo.png" alt="Logo" />
@@ -49,7 +49,7 @@
             Emergency <span class="block">service</span>
           </h2>
         </div>
-        <div id="counter-panel" class="sm:block hidden">
+        <div id="counter-panel" class="block">
           <div class="flex justify-center items-center gap-4">
             <div
               class="favorite-counter flex justify-center items-center gap-2 bg-[#ecfff0] font-bold px- px-6 py-3 rounded-[50px] text-madurai"
@@ -71,12 +71,12 @@
             </div>
           </div>
         </div>
-        <div class="toggle-menu sm:hidden block">
+        <div class="toggle-menu hidden">
           <i class="fa-solid fa-bars"></i>
         </div>
       </section>
       <!-- mobile responsive -->
-      <section id="mobile-responsive " class="hidden">
+      <!-- <section id="mobile-responsive " class="hidden">
         <div class="mobile-counter-panel block sm:hidden mb-4">
           <div class="">
             <div class="flex justify-center items-center gap-4">
@@ -119,7 +119,7 @@
           </div>
           <div class="call-history mt-4 bg-blue-100 h-full w-full"></div>
         </aside>
-      </section>
+      </section> -->
       <!-- heading section -->
       <section
         class="flex justify-center w-full h-52 bg-[linear-gradient(90deg,#013223_0%,#006747_50%,#013223_100%)] py-5 px-2"
@@ -146,7 +146,9 @@
     </header>
     <!-- main section: card and aside area -->
     <main>
-      <section class="sm:px-12 sm:py-10 p-5 w-full flex gap-6">
+      <section
+        class="sm:px-12 sm:py-10 p-5 w-full space-y-6 lg:space-y-0 flex gap-6 lg:flex-row flex-col-reverse"
+      >
         <section
           id="hotline-cards-section"
           class="flex-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6"
@@ -469,7 +471,7 @@
         </section>
         <aside
           id="#hotline-call-history"
-          class="flex-1 px-6 py-8 bg-white rounded-2xl shadow overflow-hidden lg:block hidden"
+          class="flex-1 px-6 py-8 bg-white rounded-2xl shadow overflow-hidden"
         >
           <div class="call-history-top flex justify-between items-center">
             <h3 class="font-semibold text-madurai text-xl">
@@ -478,15 +480,12 @@
             </h3>
             <button
               class="btn text-lg text-madurai bg-[#00a63e] text-white font-normal px-8 rounded-[50px]"
-              id="history-clear-btn"
+              id="clear-history-btn"
             >
               Clear
             </button>
           </div>
-            <div
-              id="call-history"
-              class="mt-2"
-            ></div>
+          <div id="call-history" class="mt-2"></div>
         </aside>
       </section>
     </main>

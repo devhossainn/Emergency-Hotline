@@ -27,7 +27,6 @@ for (const copyBtn of copyButtons) {
   });
 }
 // call btn
-
 const callButtons = document.querySelectorAll(".call-btn");
 for (const callBtn of callButtons) {
   callBtn.addEventListener("click", function (e) {
@@ -50,8 +49,11 @@ for (const callBtn of callButtons) {
     history.classList.add(
       "bg-gray-50",
       "flex",
+      "flex-col",
+      "lg:flex-row",
       "justify-between",
-      "items-center",
+      "lg:items-center",
+      "flex-wrap",
       "gap-2",
       "rounded-2xl",
       "p-4",
@@ -84,6 +86,13 @@ for (const callBtn of callButtons) {
 
     history.appendChild(service);
     history.appendChild(time);
-    callHistory.appendChild(history);
+    callHistory.prepend(history);
+
+    // clear btn
+    document
+      .getElementById("clear-history-btn")
+      .addEventListener("click", function (e) {
+        callHistory.innerHTML = "";
+      });
   });
 }
