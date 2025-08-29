@@ -23,3 +23,10 @@
 
 2. If you want to create a new element in the document, you need to call the `document.createElement()` function and pass the HTML tag name as a string
    To insert this element into the DOM, first select a parent element. Then use methods like `appendChild(), append(), or prepend()`on that parent element to add the new element.
+
+3. When user click on an element, event start from that element. Then it go up to parent, then parent’s parent, then document. it's call `event buble` behavior.
+
+4. And in `event delegation` we don’t need to put event listener in every small element. We can put event listener in it's parent element. Then we can check which child was clicked. It so useful when many buttons or dynamic elements remain on a parent element.
+
+5. Event normally behave like bubble such as (child → parent → document). If we don’t want it, we can use `stopPropagation()` function. It will stop the bubbling.
+   And Some elements have default action. We can control or stop element default action behavior by calling `preventDefault() `function.
