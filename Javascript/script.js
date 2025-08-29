@@ -19,7 +19,7 @@ for (const copyBtn of copyButtons) {
     const card = copyBtn.closest(".hotline-card-body");
     const numberToCopy = card.querySelector(".hotline-number").innerText;
     navigator.clipboard.writeText(numberToCopy).then(() => {
-      alert(numberToCopy + " copied");
+      alert(numberToCopy + " number copied");
     });
     let copyCount = parseInt(document.getElementById("copy-number").innerText);
     copyCount++;
