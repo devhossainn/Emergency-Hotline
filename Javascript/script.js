@@ -37,6 +37,7 @@ for (const callBtn of callButtons) {
     const serviceNumber = card.querySelector(".hotline-number").innerText;
 
     if (coin >= 20) {
+      alert(`${serviceTitle} calling in ${serviceNumber} `);
       document.getElementById("coin").innerText = coinCut;
     } else {
       alert("You have not sufficient balance");
@@ -93,6 +94,7 @@ for (const callBtn of callButtons) {
       .getElementById("clear-history-btn")
       .addEventListener("click", function (e) {
         callHistory.innerHTML = "";
+        
       });
   });
 }
